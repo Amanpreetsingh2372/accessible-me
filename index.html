@@ -1,68 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/LocalBusiness">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accessible Me</title>
+  <title>Jam Box Studios</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Oswald:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+  <!-- Skip Link -->
+  <a class="skip-link" href="#maincontent">Skip to Main Content</a>
+
   <div class="container">
-    <div class="site-header">
-      <h1>Jam Box Studios</h1>
-      <div class="main-nav">
+    <!-- Header -->
+    <header class="site-header" role="banner">
+      <h1 itemprop="name">Jam Box Studios</h1>
+      <nav class="main-nav" role="navigation" aria-label="Primary Navigation">
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Reservation</a></li>
-          <li><a href="#">Studio</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Book Now</a></li>
+          <li><a href="#">Our Studio</a></li>
         </ul>
-      </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
-    </div>
-    <div class="main-content">
-      <h1>Welcome to Jam Box</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
-      <div class="owner">
-        <h1>Meet the owner</h1>
-        <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
-        </ul>
-        <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
-        </p>
-      </div>
-      <div class="contact-section">
-        <h1>Contact Us</h1>
-        <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-    </div>
-    <div class="site-footer">
-      &copy; 2021 Jam Box Studios
-    </div>
-  </div>
-</body>
+      </nav>
+      <img src="http://picsum.photos/1200/900" alt="Jam Box studio promotional banner" class="banner" itemprop="image">
+    </header>
 
-</html>
+    <!-- Main -->
+    <main id="maincontent" class="main-content" role="main">
+      <section>
+        <h2>Welcome to Jam Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, molestias earum. Facere libero perspiciatis voluptatibus vero sequi expedita harum labore.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum quia soluta amet pariatur quaerat veritatis perspiciatis blanditiis nisi doloremque delectus?</p>
+      </section>
+
+      <section class="owner" aria-labelledby="owner-heading">
+        <h2 id="owner-heading">Studio Owner</h2>
+        <ul>
+          <li><strong>Name:</strong> Jane Smith</li>
+          <li><strong>Role:</strong> Founder & CEO</li>
+          <li><strong>Email:</strong> janesmith@jambox.ca</li>
+          <li><strong>Phone:</strong> (613) 111-2222</li>
+        </ul>
+      </section>
+
+      <section class="address" aria-labelledby="address-heading">
+        <h2 id="address-heading">Find Us</h2>
+        <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <span itemprop="streetAddress">456 Harmony Ave</span>,<br>
+          <span itemprop="addressLocality">Musicville</span>, 
+          <span itemprop="addressRegion">ON</span><br>
+          <span itemprop="postalCode">K1X 2B4</span>
+        </address>
+      </section>
+
+      <section class="contact-section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Get in Touch</h2>
+        <form action="thanks.html" role="form">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+
+          <label for="email">E
